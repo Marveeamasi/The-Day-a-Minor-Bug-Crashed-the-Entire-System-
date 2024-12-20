@@ -1,9 +1,9 @@
 import {subscriptionStartDate} from '../utils/unsub.js';
 
 function calculateRenewalDate(subscriptionStartDate) {
-  const startDate = new Date(subscriptionStartDate);
+  const startDate = subscriptionStartDate;
   
-  const renewalDate = new Date(startDate.getTime() + 30 * 24 * 60 * 60 * 1000);
+  const renewalDate = new Date(startDate + 30 * 24 * 60 * 60 * 1000);
 
   return renewalDate;
 }
