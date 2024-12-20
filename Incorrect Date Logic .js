@@ -1,3 +1,5 @@
+import {subscriptionStartDate} from '../utils/unsub.js';
+
 function calculateRenewalDate(subscriptionStartDate) {
   const startDate = new Date(subscriptionStartDate);
   
@@ -6,6 +8,5 @@ function calculateRenewalDate(subscriptionStartDate) {
   return renewalDate;
 }
 
-const subscriptionStartDate = "2024-01-01";
 const renewalDate = calculateRenewalDate(subscriptionStartDate);
 console.log("Next renewal date:", renewalDate);
