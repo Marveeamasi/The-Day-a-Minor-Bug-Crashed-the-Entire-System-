@@ -1,7 +1,8 @@
-const { addDays, isValid } = require("date-fns");
+import { addDays, isValid } from "date-fns";
+import {subscriptionStartDate} from '../utils/unsub.js'
 
 function calculateRenewalDate(subscriptionStartDate) {
-  const startDate = new Date(subscriptionStartDate);
+  const startDate = subscriptionStartDate;
   if (!isValid(startDate)) {
     throw new Error("Invalid subscription start date");
   }
@@ -12,7 +13,6 @@ function calculateRenewalDate(subscriptionStartDate) {
 }
 
 try {
-  const subscriptionStartDate = "2024-01-01";
   const renewalDate = calculateRenewalDate(subscriptionStartDate);
   console.log("Next renewal date:", renewalDate);
 } catch (error) {
